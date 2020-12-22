@@ -1,11 +1,12 @@
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
 body {
-    background:black;
+    background:#5f1d03;
     color:white;
     font-size: 16px;
     font-family: arial,sans-serif;
@@ -14,6 +15,7 @@ body {
 a {
     color:white;
     text-decoration: none;
+    opacity: 70%;
 }
 
 ul {
@@ -21,7 +23,7 @@ ul {
 }
 
 .contenedor {
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -30,12 +32,17 @@ ul {
     justify-content: space-between;
     align-items: center;
     height: 10px;
+    width: 100%;
     padding: 4%;
-    background-color: coral;
+    background-color: rgb(63, 36, 1);
 }
 
 .logo {
-    width: 10%;
+    width: 8%;
+    animation-name: logo;
+    animation-duration: 1.5s;
+    position: relative;
+    animation-timing-function: ease;
 }
 
 .nav-main ul {
@@ -48,5 +55,141 @@ ul {
 }
 
 .nav-main ul li a:hover {
-    border-bottom: 2px solid #fff;
-  }
+    opacity: 100%;
+    color: rgb(255, 171, 74)
+}
+
+@keyframes logo {
+    0% {
+        opacity: 0%; right: 100%;
+    }
+    50%{
+        right: 0%;
+    }
+    100% {
+        opacity: 100%; 
+    }
+}
+
+
+/*slider */
+
+.slider{
+    width:100%;
+    margin:auto;
+    overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: slider 20s infinite;
+}
+.slider li{
+    width: 100%;
+}
+img {
+    width: 100%;
+}
+@keyframes slider {
+    /* primera imagen */
+    0% {margin-left: 0%;}
+    32% {margin-left: 0%}
+    /* segunda imagen*/
+    33% {margin-left: -100%}
+    65% {margin-left: -100%}
+    /* tercera imagen*/
+    66% {margin-left: -200%}
+    98% {margin-left: -200%}
+
+}
+/*botones*/
+.button{
+    position:relative;
+    padding:2% 2%;
+    border:none;
+    background-color:transparent;
+    cursor:pointer;
+    outline:0;
+    font-size:100%;
+    margin:0% 0%
+}
+
+.button.type1{
+    color:#566473
+}
+.button.type1.type1::after,.button.type1.type1::before{
+    content:"";
+    display:block;
+    position:absolute;
+    width:20%;
+    height:20%;
+    border:2px solid;
+    transition:all .6s ease;
+    border-radius:2px
+}
+.button.type1.type1::after{
+    bottom:0;
+    right:0;
+    border-color:transparent #566473 #566473 transparent
+}
+.button.type1.type1::before{
+    top:0;
+    left:0;
+    border-color:#566473 transparent transparent #566473
+}
+.button.type1.type1:hover:after,.button.type1.type1:hover:before{
+    width:100%;
+    height:100%
+}
+.button.type2{
+    color:#99c9bf
+}
+.button.type2.type2:after,.button.type2.type2:before{
+    content:"";
+    display:block;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:2px;
+    background-color:#16a085;
+    transition:all .3s ease;
+    transform:scale(0.85)
+}
+.button.type2.type2:hover:before{
+    top:0;
+    transform:scale(1)
+}
+.button.type2.type2:hover:after{
+    transform:scale(1)
+}
+
+.button.type3.type3::after,.button.type3.type3::before{
+    content:"";
+    display:block;
+    position:absolute;
+    width:10%;
+    height:10%;
+    border:1px solid;
+    transition:all .3s ease;
+    border-radius:2%
+}
+.button.type3{
+    color:#fff
+}
+.button.type3.type3::after{
+    bottom:0;
+    right:0;
+    border-color:transparent #aa380b #aa380b transparent
+}
+.button.type3.type3::before{
+    top:0;
+    left:0;
+    border-color:#aa380b transparent transparent #aa380b
+}
+.button.type3.type3:hover:after,.button.type3.type3:hover:before{
+    border-color:#f1874a;
+    width:100%;
+    height:100%
+}
