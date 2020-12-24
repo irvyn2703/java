@@ -13,12 +13,14 @@ logo
     margin: 0px;
     padding: 0px;
     width: 100%;
+    height: auto;
 }
 
 body {
-    background-color:rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255);
     color:#0D0D0D;
     font-size: 16px;
+    height: auto;
     font-family: arial,sans-serif;
 }
 
@@ -35,7 +37,7 @@ ul {
 .contenedor {
     width: 100%;
     margin: auto;
-    background-color:  rgb(250, 233, 208);
+    background-color: transparent;
 }
 
 .nav-main {
@@ -61,8 +63,8 @@ ul {
 }
 
 .nav-main ul.menu {
-    flex: 1;
-    margin-left: 2%;
+    flex: 5;
+    margin-left: 5%;
 }
 
 .nav-main ul li a:hover {
