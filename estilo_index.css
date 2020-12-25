@@ -17,11 +17,12 @@ logo
 }
 
 body {
-    background-color: rgba(255, 255, 255);
+    background-color: rgb(245, 226, 202);
     color:#0D0D0D;
     font-size: 16px;
     height: auto;
     font-family: arial,sans-serif;
+    height: 100%;
 }
 
 a {
@@ -44,32 +45,30 @@ ul {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    height: 10px;
+    height: auto;
     width: 100%;
-    padding: 3.5%;
-    background-color: rgb(250, 233, 208);
+    padding: .5%;
+    background-color: #3a3a3a;
 }
 
 .logo {
-    width: 10%;
+    width: 8%;
     animation-name: logo;
+    opacity: 80%;
     animation-duration: 1.5s;
     position: relative;
     animation-timing-function: ease;
+    margin-left: 2%;;
 }
 
 .nav-main ul {
     display: flex;
+    margin: .5%;
 }
 
 .nav-main ul.menu {
     flex: 5;
-    margin-left: 5%;
-}
-
-.nav-main ul li a:hover {
-    opacity: 100%;
-    color: rgb(255, 171, 74)
+    margin-left: 3%;
 }
 
 @keyframes logo {
@@ -115,6 +114,24 @@ img {
     66% {margin-left: -200%}
     98% {margin-left: -200%}
 
+}
+
+/*footer*/
+.footer{
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    background-color: #3a3a3a;
+    height: auto;
+    display:flex;
+    padding: 1%;
+}
+
+.footer i:hover{
+    color: rgb(253, 198, 125);
+    opacity: 95%;
+    cursor: default;
 }
 /*botones*/
 .button{
@@ -189,20 +206,23 @@ img {
     border-radius:2%
 }
 .button.type3{
-    color:#8C3616;
+    color:#ffe7df;
 }
 .button.type3.type3::after{
     bottom:0;
     right:0;
-    border-color:transparent #8C3616 #8C3616 transparent
+    opacity: 10%;
+    border-color:transparent #fff4f0 #fff4f0 transparent
 }
 .button.type3.type3::before{
     top:0;
     left:0;
-    border-color: #8C3616 transparent transparent #8C3616
+    opacity: 10%;
+    border-color: #fff4f0 transparent transparent #fff4f0
 }
 .button.type3.type3:hover:after,.button.type3.type3:hover:before{
-    border-color:#D96E11;
+    border-color:#ffffff;
+    opacity: 100%;
     width:100%;
     height:100%
 }
