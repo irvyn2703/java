@@ -101,8 +101,11 @@ ul {
 }
 .material {
     padding: 10%;
+    width: 75%;
+    margin: auto;
     transition:all 0.3s ease-out;
 }
+
 .informacion {
     text-align: center;
     color: #fff;
@@ -123,7 +126,7 @@ ul {
 .footer{
     position: fixed;
     bottom: 0;
-    font-size: 12px;
+    font-size: 90%;
     color: #fff;
     text-align: center;
     background-color: #3a3a3a;
