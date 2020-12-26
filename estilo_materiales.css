@@ -16,6 +16,9 @@ logo
     height: auto;
 }
 
+i {
+    font-style: normal;
+}
 body {
     background-color: rgb(245, 226, 202);
     color:#0D0D0D;
@@ -101,8 +104,9 @@ ul {
 }
 .material {
     padding: 10%;
-    transition:all 0.3s ease-out;
+    display: flex;
 }
+
 .informacion {
     text-align: center;
     color: #fff;
@@ -113,9 +117,11 @@ ul {
 /*tipos*/
 .tipos {
     margin: 2%;
+    width: 90%;
+    font-size: 100%;
     color: rgb(51, 51, 51);
     display: grid;
-    grid-template-columns:repeat(auto-fill,minmax(100px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(50px,1fr));
 }
 
 
@@ -123,7 +129,9 @@ ul {
 .footer{
     position: fixed;
     bottom: 0;
-    font-size: 12px;
+    font-size: 70%;
+    font-family: arial;
+    font-style: none;
     color: #fff;
     text-align: center;
     background-color: #3a3a3a;
@@ -229,4 +237,14 @@ ul {
     opacity: 100%;
     width:100%;
     height:100%
+}
+
+@media (max-width:350px) {
+    .imagen {
+        display: none;
+    }
+    .materiales{
+        display: grid;
+        grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+    }
 }
