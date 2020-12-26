@@ -54,7 +54,7 @@ ul {
 .logo {
     width: 8%;
     animation-name: logo;
-    opacity: 80%;
+    opacity: 90%;
     animation-duration: 1.5s;
     position: relative;
     animation-timing-function: ease;
@@ -120,7 +120,9 @@ img {
 .footer{
     position: fixed;
     bottom: 0;
-    font-size: 12px;
+    font-size: 100%;
+    font-family: arial;
+    font-style: none;
     color: #fff;
     text-align: center;
     background-color: #3a3a3a;

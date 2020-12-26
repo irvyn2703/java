@@ -57,7 +57,7 @@ ul {
 .logo {
     width: 8%;
     animation-name: logo;
-    opacity: 80%;
+    opacity: 90%;
     animation-duration: 1.5s;
     position: relative;
     animation-timing-function: ease;
@@ -100,11 +100,13 @@ ul {
 }
 .materiales{
     display: grid;
-    grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
+    margin: auto;
+    width: 80%;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
 }
 .material {
     padding: 10%;
-    display: flex;
+    margin: auto;
 }
 
 .informacion {
@@ -129,7 +131,7 @@ ul {
 .footer{
     position: fixed;
     bottom: 0;
-    font-size: 70%;
+    font-size: 100%;
     font-family: arial;
     font-style: none;
     color: #fff;
