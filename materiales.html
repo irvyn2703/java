@@ -6,7 +6,7 @@
     <title>Prueba</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="estilo_materiales.css">
-    <script src="materiales.js"></script>
+
 </head>
 <body>
 <!-- parte de arriba -->
@@ -32,37 +32,30 @@
         </nav>
         <br>
         <!-- contenido -->
-        <input type="search" placeholder="buscar.." class="filtro">
+        <input type="search" placeholder="Escribe el nombre del material.." id="filtro">
+        <div class="tipos">
+            <input type="checkbox" id="herreria">
+            Herreria
+            <br>
+            <input type="checkbox" id="aluminio">
+            Aluminio
+        </div>
+        <div id="herre" class="ocultar">
+            <h2>Herreria</h2>
             <div class="materiales">
                 <div class="material">
                     <div class="imagen">
                         <img src="https://placeimg.com/200/200/tech" alt="imagen">
                     </div>
                     <div class="informacion">
-                        <div class="nombre">
-                            Nombre: cuadrado
+                        <div>
+                            <b>Nombre:</b> <b class="nombre">cuadrado</b>
                         </div>
-                        <div class="tamano">
-                            Tamaño: 120 cm
+                        <div>
+                            <b>Tamaño:</b> <b class="tamano">120 cm</b>
                         </div>
-                        <div class="precio">
-                            Precio: 200
-                        </div>
-                    </div>
-                </div>
-                <div class="material">
-                    <div class="imagen">
-                        <img src="https://placeimg.com/200/200/tech" alt="imagen">
-                    </div>
-                    <div class="informacion">
-                        <div class="nombre">
-                            Nombre: rectangulo
-                        </div>
-                        <div class="tamano">
-                            Tamaño: 120 cm
-                        </div>
-                        <div class="precio">
-                            Precio: 500
+                        <div>
+                            <b>Precio: $</b> <b class="precio">150</b>
                         </div>
                     </div>
                 </div>
@@ -71,14 +64,14 @@
                         <img src="https://placeimg.com/200/200/tech" alt="imagen">
                     </div>
                     <div class="informacion">
-                        <div class="nombre">
-                            Nombre: circulo
+                        <div>
+                            <b>Nombre:</b> <b class="nombre">triangulo</b>
                         </div>
-                        <div class="tamano">
-                            Tamaño: 80 cm
+                        <div>
+                            <b>Tamaño:</b> <b class="tamano">150 cm</b>
                         </div>
-                        <div class="precio">
-                            Precio: 100
+                        <div>
+                            <b>Precio: $</b> <b class="precio">150</b>
                         </div>
                     </div>
                 </div>
@@ -87,18 +80,104 @@
                         <img src="https://placeimg.com/200/200/tech" alt="imagen">
                     </div>
                     <div class="informacion">
-                        <div class="nombre">
-                            Nombre: triangulo
+                        <div>
+                            <b>Nombre:</b> <b class="nombre">circulo</b>
                         </div>
-                        <div class="tamano">
-                            Tamaño: 50 cm
+                        <div>
+                            <b>Tamaño:</b> <b class="tamano">80 cm</b>
                         </div>
-                        <div class="precio">
-                            Precio: 250
+                        <div>
+                            <b>Precio: $</b> <b class="precio">100</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="material">
+                    <div class="imagen">
+                        <img src="https://placeimg.com/200/200/tech" alt="imagen">
+                    </div>
+                    <div class="informacion">
+                        <div>
+                            <b>Nombre:</b> <b class="nombre">triangulo</b>
+                        </div>
+                        <div>
+                            <b>Tamaño:</b> <b class="tamano">220 cm</b>
+                        </div>
+                        <div>
+                            <b>Precio: $</b> <b class="precio">100</b>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="alum" class="ocultar">
+            <h2>Aluminio</h2>
+            <div class="materiales">
+                <div class="material">
+                    <div class="imagen">
+                        <img src="https://placeimg.com/200/200/tech" alt="imagen">
+                    </div>
+                    <div class="informacion">
+                        <div>
+                            <b>Nombre:</b> <b class="nombre">cuadrado</b>
+                        </div>
+                        <div>
+                            <b>Tamaño:</b> <b class="tamano">120 cm</b>
+                        </div>
+                        <div>
+                            <b>Precio: $</b> <b class="precio">150</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="material">
+                    <div class="imagen">
+                        <img src="https://placeimg.com/200/200/tech" alt="imagen">
+                    </div>
+                    <div class="informacion">
+                        <div>
+                            <b>Nombre:</b> <b class="nombre">triangulo</b>
+                        </div>
+                        <div>
+                            <b>Tamaño:</b> <b class="tamano">150 cm</b>
+                        </div>
+                        <div>
+                            <b>Precio: $</b> <b class="precio">150</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="material">
+                    <div class="imagen">
+                        <img src="https://placeimg.com/200/200/tech" alt="imagen">
+                    </div>
+                    <div class="informacion">
+                        <div>
+                            <b>Nombre:</b> <b class="nombre">circulo</b>
+                        </div>
+                        <div>
+                            <b>Tamaño:</b> <b class="tamano">80 cm</b>
+                        </div>
+                        <div>
+                            <b>Precio: $</b> <b class="precio">100</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="material">
+                    <div class="imagen">
+                        <img src="https://placeimg.com/200/200/tech" alt="imagen">
+                    </div>
+                    <div class="informacion">
+                        <div>
+                            <b>Nombre:</b> <b class="nombre">triangulo</b>
+                        </div>
+                        <div>
+                            <b>Tamaño:</b> <b class="tamano">220 cm</b>
+                        </div>
+                        <div>
+                            <b>Precio: $</b> <b class="precio">100</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- footer-->
         <div class="footer">
             <i class="fas fa-map-marker-alt"> Av.Manantiales #5 Cuautlancingo,Puebla.</i>
@@ -106,6 +185,6 @@
         </div>
 
     </div>
-
+    <script src="materiales.js"></script>
 </body>
 </html>

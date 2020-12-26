@@ -120,6 +120,7 @@ img {
 .footer{
     position: fixed;
     bottom: 0;
+    font-size: 12px;
     color: #fff;
     text-align: center;
     background-color: #3a3a3a;
