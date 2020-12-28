@@ -6,8 +6,7 @@
   var $aluminio = document.getElementById('alum');
   var saludo = function(e){
     contador = 0;
-    var palabra = e.target.value.toString();
-    var palabra = palabra.toLowerCase();
+    var palabra = e.target.value.toLowerCase();
     
     console.log(palabra);
     
