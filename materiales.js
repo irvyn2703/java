@@ -6,8 +6,13 @@
   var $aluminio = document.getElementById('alum');
   var saludo = function(e){
     contador = 0;
+    var palabra = e.target.value.toString();
+    var palabra = palabra.toLowerCase();
+    
+    console.log(palabra);
+    
     document.querySelectorAll('.nombre').forEach(x => {
-      if (x.textContent.toLowerCase().includes(e.target.value) || x.textContent.toLocaleUpperCase().includes(e.target.value)){
+      if (x.textContent.toLowerCase().includes(palabra) ){
         material[contador].classList.remove("ocultar");
       } 
       else material[contador].classList.add("ocultar");
