@@ -3,6 +3,7 @@ public class circulo2 {
     public static final float pi=3.141596f;
     private float radio;
     private punto2 origen;
+    private int op=1;
 
     public circulo2(){
         radio = 0.0f;
@@ -28,12 +29,24 @@ public class circulo2 {
         return radio;
     }
 
-
-    public static void main(String[] args) {
-        punto2 orig = new punto2();
-        orig.setXY();
-        circulo2 circ1 = new circulo2(0.0f, orig);
-        circ1.setRadio();
-        System.out.println("El area del circulo: " + circ1.calcArea() + "  Origen: " + "(" + orig.getX() + "," + orig.getY() + ")");
+    public void menu(){
+        Scanner menu = new Scanner(System.in);
+        do{
+            System.out.println("MENU\n1.-ingresar circulo\n2.-mostrar circulo\n3.-salir");
+            op = menu.nextInt();
+            switch(op){
+                case 1: 
+                origen.setXY();
+                setRadio();
+                break;
+                case 2:
+                System.out.println("El area del circulo: " + calcArea() + "  Origen: " + "(" + origen.getX() + "," + origen.getY() + ")");
+                break;
+                case 3:
+                System.out.println("gracias por usar este programa :)");
+                break;
+            }
+        } while(op!=3);
+        menu.close();
     }
 }

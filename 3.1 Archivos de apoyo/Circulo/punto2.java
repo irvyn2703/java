@@ -25,7 +25,6 @@ public class punto2 {
         x = teclado.nextFloat();
         System.out.println("ingresa Y: ");
         y = teclado.nextFloat();
-        // teclado.close();
     }
     public void mostrar(){
         System.out.println("origen: (" + x + "," + y + ")");
