@@ -1,0 +1,5 @@
+arreglo = 87
+arreglo = 74
+arreglo = 62
+arreglo = 22
+arreglo = 1
