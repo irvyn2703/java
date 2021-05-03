@@ -1,11 +1,12 @@
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
+import java.util.*;
 
 class SumaDatos extends JFrame implements ActionListener {
     private JTextField textfield1, textfield2;
     private JTextArea textarea1;
-    private JButton boton1, boton2;
+    private JButton boton1, boton2,multi,divi,raiz,potencia;
     private JLabel label1;
     private JLabel label2;
     private JLabel label3;
@@ -17,6 +18,7 @@ class SumaDatos extends JFrame implements ActionListener {
 
     public SumaDatos() {
         setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);;
 
         // crea la barra
         menu = new JMenuBar();
@@ -40,8 +42,10 @@ class SumaDatos extends JFrame implements ActionListener {
         historial.add(guardarHistorial);
         cientifica = new JMenuItem("cientifica");
         tipo.add(cientifica);
+        cientifica.addActionListener(this);
         normal = new JMenuItem("normal");
         tipo.add(normal);
+        normal.addActionListener(this);
         tutorial = new JMenuItem("tutorial");
         ayuda.add(tutorial);
         acercaDe = new JMenuItem("acerca De...");
@@ -72,6 +76,26 @@ class SumaDatos extends JFrame implements ActionListener {
         boton2 = new JButton("-");
         boton2.setBounds(10, 200, 100, 30);
         add(boton2);
+        multi = new JButton("x");
+        multi.setBounds(120,150, 100, 30);
+        add(multi);
+        multi.addActionListener(this);
+        divi = new JButton("/");
+        divi.setBounds(120,200, 100, 30);
+        add(divi);
+        divi.addActionListener(this);
+        raiz = new JButton("raiz");
+        raiz.setBounds(230,150, 100, 30);
+        raiz.setVisible(false);
+        add(raiz);
+        raiz.addActionListener(this);
+        potencia = new JButton("potencia");
+        potencia.setBounds(230,200,100,30);
+        potencia.setVisible(false);
+        add(potencia);
+        potencia.addActionListener(this);
+        
+
         boton2.addActionListener(this);
         setTitle("Sumar");
 
@@ -95,6 +119,43 @@ class SumaDatos extends JFrame implements ActionListener {
             int resta = x11 - x22;
             String total1 = String.valueOf(resta);
             textarea1.setText(total1);
+        }
+        if (e.getSource() == multi){
+            int x1 = Integer.parseInt(textfield1.getText());
+            int x2 = Integer.parseInt(textfield2.getText());
+            int mul=x1*x2;
+            textarea1.setText(String.valueOf(mul));
+        }
+        if (e.getSource() == divi){
+            double x1 = Double.parseDouble(textfield1.getText());
+            double x2 = Double.parseDouble(textfield2.getText());
+            double divi = x1/x2;
+            textarea1.setText(""+divi);
+        }
+        if (e.getSource() == raiz){
+            double x1 = Double.parseDouble(textfield1.getText());
+            double x2 = Double.parseDouble(textfield2.getText());
+            double raiz1 = Math.sqrt(x1);
+            double raiz2 = Math.sqrt(x2);
+            textarea1.setBounds(100, 90, 300, 20);
+            textarea1.setText("num1 = " + raiz1 + " num2 = " + raiz2);
+        }
+        if (e.getSource() == potencia){
+            int x1 = Integer.parseInt(textfield1.getText());
+            int x2 = Integer.parseInt(textfield2.getText());
+            int resul = 1;
+            for (int i = 0; i < x2; i++){
+                resul = resul * x1;
+            }
+            textarea1.setText(x1 + " a la " + x2 + " = " + resul);
+        }
+        if (e.getSource() == cientifica){
+            potencia.setVisible(true);
+            raiz.setVisible(true);
+        }
+        if (e.getSource() == normal){
+            potencia.setVisible(false);
+            raiz.setVisible(false);
         }
     }
 
