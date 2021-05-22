@@ -1,0 +1,2 @@
+Ejemplo de escritura a un archivo
+Segunda linea
