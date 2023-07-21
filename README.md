@@ -1,1 +1,1 @@
-# apuntes, practicas en java
+# apuntes y practicas en java
